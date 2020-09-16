@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react'
 import React, { useState } from 'react'
 import Task from './Task'
 
@@ -38,15 +37,19 @@ const List = ({list}) => {
             )
         })
     ) : (
-        <p></p>
+        ''
     )
     return (
         <div className='list'>
+            <div className="name-row">
             <div className='name' key={list.id}>{list.content}</div>
+            <div className="dots">...</div>
+            </div>
+            {resTasks}
             <form onSubmit={handleSubmit}>
             <input type="text" className='add-task' placeholder='Add Task' onChange={handleChange} value={task.content}/>
             </form>
-            {resTasks}
+           
         </div>
     )
 }
