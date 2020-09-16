@@ -7,8 +7,7 @@ function App() {
     <div className='main'>
       <div className='head'></div>
       <div className='under-head'></div>
-      <Content>
-      </Content>
+      <Content/>
 
     </div>
   );
